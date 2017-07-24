@@ -3,8 +3,6 @@ package com.retrykepler.client.service;
 import com.kepler.annotation.Service;
 import com.retry.annotation.Retryable;
 
-import java.util.UUID;
-
 /**
  * Created by zbyte on 17-7-20.
  */

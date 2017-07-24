@@ -1,7 +1,6 @@
 package com.retrykepler.client;
 
 import com.retrykepler.client.service.ServiceA;
-import com.retrykepler.client.service.ServiceB;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
