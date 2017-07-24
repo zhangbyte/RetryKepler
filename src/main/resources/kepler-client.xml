@@ -7,23 +7,25 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.retrykepler.client" />
+
 
     <import resource="classpath:kepler-core.xml" />
-
-    <!--retry-client-->
-    <import resource="classpath:retry-client.xml" />
 
     <!--kepler-->
     <bean id="serviceB" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
         <constructor-arg index="0" value="com.retrykepler.client.service.ServiceB" />
     </bean>
 
+    <!--retry-client(必须放在component-scan之前，即依赖注入之前)-->
+    <import resource="classpath:retry-client.xml" />
+
+    <context:component-scan base-package="com.retrykepler.client" />
+
     <!--retry-->
-    <bean class="com.retry.proxy.ProxyFactory" primary="true">
-        <constructor-arg value="com.retrykepler.client.service.ServiceB" />
-        <constructor-arg ref="serviceB" />
-        <constructor-arg ref="retry.utils" />
-    </bean>
+    <!--<bean class="com.retry.proxy.ProxyFactory" primary="true">-->
+        <!--<constructor-arg value="com.retrykepler.client.service.ServiceB" />-->
+        <!--<constructor-arg ref="serviceB" />-->
+        <!--<constructor-arg ref="retry.utils" />-->
+    <!--</bean>-->
 
 </beans>
