@@ -8,6 +8,7 @@ import com.retry.annotation.Retryable;
  */
 @Service(version = "0.0.1")
 public interface ServiceB {
+    void save();
     @Retryable
     boolean save(String data);
 }

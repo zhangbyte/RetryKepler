@@ -21,11 +21,4 @@
 
     <context:component-scan base-package="com.retrykepler.client" />
 
-    <!--retry-->
-    <!--<bean class="com.retry.proxy.ProxyFactory" primary="true">-->
-        <!--<constructor-arg value="com.retrykepler.client.service.ServiceB" />-->
-        <!--<constructor-arg ref="serviceB" />-->
-        <!--<constructor-arg ref="retry.utils" />-->
-    <!--</bean>-->
-
 </beans>
