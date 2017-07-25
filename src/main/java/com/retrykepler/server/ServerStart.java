@@ -1,6 +1,5 @@
 package com.retrykepler.server;
 
-import com.retrykepler.server.service.impl.ServiceBImpl;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;

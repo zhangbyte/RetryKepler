@@ -3,7 +3,6 @@ package com.retrykepler.server.service.impl;
 import com.kepler.annotation.Autowired;
 import com.retrykepler.client.service.ServiceB;
 import com.retrykepler.server.dao.TestDao;
-import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
@@ -18,12 +17,12 @@ public class ServiceBImpl implements ServiceB {
     public void save() {
     }
 
-    @Transactional
+//    @Transactional
     public boolean save(String data) {
         testDao.insert(data);
         System.out.println("B save ..."+data);
         System.out.println("B commit");
-//        throw new RuntimeException("B 保存失败");
-        return true;
+        throw new RuntimeException("B 保存失败");
+//        return true;
     }
 }
