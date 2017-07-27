@@ -17,12 +17,18 @@ public class ServiceBImpl implements ServiceB {
     public void save() {
     }
 
-//    @Transactional
+    @Transactional
     public boolean save(String data) {
+        try {
+            Thread.sleep(4000L);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         testDao.insert(data);
         System.out.println("B save ..."+data);
         System.out.println("B commit");
-        throw new RuntimeException("B 保存失败");
-//        return true;
+//        throw new RuntimeException("B 保存失败");
+        return true;
     }
 }
