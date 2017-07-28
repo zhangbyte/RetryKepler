@@ -18,7 +18,7 @@ public class ServiceBImpl implements ServiceB {
     }
 
     @Transactional
-    public boolean save(String data) {
+    public void save(String data) {
         try {
             Thread.sleep(4000L);
         } catch (InterruptedException e) {
@@ -28,7 +28,6 @@ public class ServiceBImpl implements ServiceB {
         testDao.insert(data);
         System.out.println("B save ..."+data);
         System.out.println("B commit");
-//        throw new RuntimeException("B 保存失败");
-        return true;
+        throw new RuntimeException("B 保存失败");
     }
 }

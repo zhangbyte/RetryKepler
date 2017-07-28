@@ -12,6 +12,6 @@ public interface ServiceB {
     void save();
 
     @Retryable
-    boolean save(String data);
+    void save(String data);
 
 }
