@@ -19,15 +19,15 @@ public class ServiceBImpl implements ServiceB {
 
     @Transactional
     public void save(String data) {
-        try {
-            Thread.sleep(4000L);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(4000L);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         testDao.insert(data);
         System.out.println("B save ..."+data);
         System.out.println("B commit");
-        throw new RuntimeException("B 保存失败");
+//        throw new RuntimeException("B 保存失败");
     }
 }

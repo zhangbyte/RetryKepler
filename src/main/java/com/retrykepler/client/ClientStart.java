@@ -10,7 +10,7 @@ public class ClientStart {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("kepler-client.xml");
-        ServiceA a = context.getBean(ServiceA.class);
-        a.save("didi");
+//        ServiceA a = context.getBean(ServiceA.class);
+//        a.save("didi");
     }
 }
