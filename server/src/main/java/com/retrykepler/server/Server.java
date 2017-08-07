@@ -9,6 +9,7 @@ import java.io.IOException;
  */
 public class Server {
     public static void main(String[] args) throws IOException {
+        System.setProperty("spring.profiles.active", "prod");
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("kepler-service.xml");
         context.start();

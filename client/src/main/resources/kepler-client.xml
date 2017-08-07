@@ -13,6 +13,10 @@
     <bean id="serviceB" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
         <constructor-arg index="0" value="com.retrykepler.service.ServiceB" />
     </bean>
+    <bean id="serviceB2" class="com.kepler.service.imported.ImportedServiceFactory" parent="kepler.service.imported.abstract">
+        <constructor-arg index="0" value="com.retrykepler.service.ServiceB2" />
+    </bean>
+
 
     <!--retry-client(必须放在component-scan之前，即依赖注入之前)-->
     <import resource="classpath:retry-client.xml" />
